@@ -3,7 +3,7 @@ import './Modal.css'
 
 import React from 'react'
 
-export default function modal({children,handleClose,isSalesModal}) {
+export default function modal({children,isSalesModal}) {
   return (
     <div className="modal-backdrop">
       <div className="modal" style={{
@@ -13,7 +13,7 @@ export default function modal({children,handleClose,isSalesModal}) {
 
       }}>
       {children}
-      <button onClick={handleClose}>close</button>
+      
       </div>
     </div>
   )
