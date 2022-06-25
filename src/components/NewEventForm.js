@@ -5,7 +5,7 @@ import { useState } from 'react'
 export default function NewEventForm({ addEvent }) {
     const [date, setDate] = useState('')
     const [title, setTitle] = useState('')
-    const [location,setLocation]= useState('manchester')
+    const [location, setLocation] = useState('manchester')
 
     const resetForm = () => {
         setTitle('')
@@ -18,7 +18,7 @@ export default function NewEventForm({ addEvent }) {
         const event = {
             title: title,
             date: date,
-            location:location,
+            location: location,
             id: Math.floor(Math.random() * 10000)
         }
 
@@ -48,10 +48,10 @@ export default function NewEventForm({ addEvent }) {
             </label>
             <label>
                 <span>Event Location</span>
-                <select onChange={(e)=> setLocation(e.target.value)}>
-                 <option value="manchester">Manchester</option>
-                 <option value = "lonadan">Londan</option>
-                 <option value = "Cafe"> cafe</option>
+                <select onChange={(e) => setLocation(e.target.value)}>
+                    <option value="manchester">Manchester</option>
+                    <option value="lonadan">Londan</option>
+                    <option value="Cafe"> cafe</option>
                 </select>
             </label>
             <button>Submit</button>
